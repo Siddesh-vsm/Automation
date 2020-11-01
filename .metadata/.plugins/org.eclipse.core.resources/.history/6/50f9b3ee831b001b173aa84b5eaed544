@@ -1,0 +1,35 @@
+package Motorola.Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+public class question3 {
+	
+	static void validateMandatoryFields(WebDriver driver) {
+		try {
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("siddesh312@yahoo.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed());
+		driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"firstname \"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"passwd\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"address1\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"city\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[text()=\"You must register at least one phone number.\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"Zip/Postal\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"State\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"phone number\")]")).isDisplayed();
+		Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"abc\")]")).isDisplayed());
+		
+		
+		}
+		catch(Exception e) {
+			System.out.println("Error");
+			
+		}
+	}
+
+}

@@ -1,0 +1,27 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import generic.CommonMethods;
+
+public class Testcase4 {
+
+	public static void verifyErrormessages(WebDriver driver) {
+
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys(CommonMethods.randomString()+"@test.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.id("customer_firstname")).sendKeys("1233");
+		driver.findElement(By.id("customer_lastname")).sendKeys("84569");
+		driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+		driver.findElement(By.id("city")).sendKeys("78456");
+		driver.findElement(By.id("postcode")).sendKeys("ytgfrff");
+		driver.findElement(By.id("phone_mobile")).sendKeys("jekdfqgdb");
+
+	}
+
+}

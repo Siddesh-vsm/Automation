@@ -1,0 +1,21 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class testcase7 {
+	
+	
+	public static void verifyErrorMessage(WebDriver driver) {
+		
+		Actions an = new Actions(driver);
+		WebElement el = driver.findElement(By.xpath("//a[@title=\"Women\"]"));
+		an.moveToElement(el);
+		an.perform();
+		driver.findElement(By.xpath("(//a[@title=\"Dresses\"])[1]")).click();
+
+	}
+	
+}

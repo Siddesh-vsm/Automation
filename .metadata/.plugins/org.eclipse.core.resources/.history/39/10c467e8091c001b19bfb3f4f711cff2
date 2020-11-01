@@ -1,0 +1,55 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+/**
+ * Hello world!
+ *
+ */
+public class question 
+{
+	
+	static void mandatoryFields(WebDriver driver) {
+		try {
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("siddesh312@yahoo.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed());
+		driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"firstname \"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"passwd\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"address1\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"city\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[text()=\"You must register at least one phone number.\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"Zip/Postal\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"State\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"phone number\")]")).isDisplayed();
+		Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"abc\")]")).isDisplayed());
+		
+		
+		}
+		catch(Exception e) {
+			
+			
+		}
+	}
+		static void verifyErrormessages(WebDriver driver) {
+			
+			driver.findElement(By.className("login")).click();
+			driver.findElement(By.id("email_create")).sendKeys("siddesh3@yahoo.com");
+			driver.findElement(By.name("SubmitCreate")).click();
+			driver.findElement(By.id("customer_firstname")).sendKeys("1233");
+			driver.findElement(By.id("customer_lastname")).sendKeys("34545");
+			driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+			
+		}
+
+	}
+

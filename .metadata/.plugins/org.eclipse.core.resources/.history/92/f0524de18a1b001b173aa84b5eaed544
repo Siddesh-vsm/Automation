@@ -1,0 +1,26 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class testcase4 {
+	
+	public static void searchProduct(WebDriver driver) {
+		
+		Actions an = new Actions(driver);
+		WebElement el= driver.findElement(By.xpath("//a[@title=\"Women\"]"));
+		an.moveToElement(el);
+		an.perform();
+		driver.findElement(By.xpath("//a[@title=\"Summer Dresses\"]")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		WebElement el1= driver.findElement(By.xpath("//div[@class=\"product-container\""));
+		js.executeScript("arguments[0].scrollIntoView();", el1);
+		driver.findElement(By.xpath("(//*[contains(text(),\"Printed Chiffon Dress\")])[2]")).getText();
+		
+	}
+
+}

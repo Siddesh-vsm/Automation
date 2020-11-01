@@ -1,0 +1,53 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
+
+import generic.CommonMethods;
+
+public class Testcase3 {
+
+	public static void validateMandatoryFields(WebDriver driver) {
+		try {
+			driver.findElement(By.className("login")).click();
+			driver.findElement(By.id("email_create")).sendKeys(CommonMethods.randomString() + "@test.com");
+			driver.findElement(By.name("SubmitCreate")).click();
+			driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+			String num = driver.findElement(By.xpath("//div[@class=\"alert alert-danger\"]//p")).getText();
+			int count = CommonMethods.extractNumber(num);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,200)");
+			if (count == 8) {
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"firstname \"]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"passwd\"]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"address1\"]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"city\"]")).isDisplayed());
+				Assert.assertTrue(
+						driver.findElement(By.xpath("//li[text()=\"You must register at least one phone number.\"]"))
+								.isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"Zip/Postal\")]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"State\")]")).isDisplayed());
+				Assert.assertTrue(
+						driver.findElement(By.xpath("//li[contains(text(),\"phone number\")]")).isDisplayed());
+				Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"abc\")]")).isDisplayed());
+
+			} else {
+
+				System.out.println("Number of error are not matching");
+				Reporter.log("Number of error are not matching");
+				Assert.fail();
+			}
+
+		} catch (Exception e) {
+			System.out.println("Error");
+			Reporter.log("Error found" + e);
+
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+public class Testcase4 {
+
+	public static void verifyErrormessages(WebDriver driver) {
+
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("siddesh3@yahoo.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.id("customer_firstname")).sendKeys("1233");
+		driver.findElement(By.xpath("//label[@for=\"customer_firstname\"]")).click();
+//		String s1= driver.findElement(By.id("customer_firstname")).getCssValue("color");
+//		String s2= driver.findElement(By.id("customer_firstname")).getCssValue("color");
+		Assert.assertTrue(driver.findElement(By.name("customer_firstname")).getCssValue("color")=="#f13340", "Error not shown");
+	
+		driver.findElement(By.id("customer_lastname")).sendKeys("34545");
+		driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+
+	}
+
+}

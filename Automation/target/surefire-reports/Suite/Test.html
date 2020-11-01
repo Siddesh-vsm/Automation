@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Nov 01 23:51:22 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>248 seconds (248804 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automationpractise.Automation.buyProduct()'><b>buyProduct</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-1487287849" onClick='toggleBox("Output-1487287849", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1487287849" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1487287849">
+order placed<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.changeQuantity()'><b>changeQuantity</b><br>Test class: automationpractise.Automation</td>
+<td></td>
+<td>9</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.errorMessage()'><b>errorMessage</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-293326812" onClick='toggleBox("Output-293326812", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-293326812" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-293326812">
+Error messages displyed<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.mandataryFeilds()'><b>mandataryFeilds</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-612716569" onClick='toggleBox("Output-612716569", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-612716569" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-612716569">
+Errors dispyed properly<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.quantity()'><b>quantity</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-1488608048" onClick='toggleBox("Output-1488608048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1488608048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1488608048">
+price changed<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.searchProduct()'><b>searchProduct</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-2771454" onClick='toggleBox("Output-2771454", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2771454" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2771454">
+Search working properly<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.userValidate()'><b>userValidate</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-870322840" onClick='toggleBox("Output-870322840", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-870322840" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-870322840">
+User created successfully<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.verifyEmail()'><b>verifyEmail</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-363397863" onClick='toggleBox("Output-363397863", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-363397863" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-363397863">
+invalid user error showing up<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+<tr>
+<td title='automationpractise.Automation.wishList()'><b>wishList</b><br>Test class: automationpractise.Automation<br/>
+<a href="#Output-2111181256" onClick='toggleBox("Output-2111181256", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2111181256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2111181256">
+item is present in wishList<br/>
+Error messages displyed<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>automationpractise.Automation@4c40b76e</td></tr>
+</table><p>
+</body>
+</html>

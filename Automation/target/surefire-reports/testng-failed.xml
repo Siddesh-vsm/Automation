@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="password" value="Pass@123"/>
+    <parameter name="url" value="siddesh@yahoo.com"/>
+    <parameter name="timeout" value="siddesh@yahoo.com"/>
+    <parameter name="username" value="siddesh@yahoo.com"/>
+    <classes>
+      <class name="automationpractise.Automation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="buyProduct"/>
+          <include name="wishList"/>
+          <include name="userValidate"/>
+          <include name="mandataryFeilds"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- automationpractise.Automation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

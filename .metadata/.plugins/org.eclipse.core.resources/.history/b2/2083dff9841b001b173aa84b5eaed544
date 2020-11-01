@@ -1,0 +1,19 @@
+package testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Base {
+	
+
+	public static void setValues() {
+		System.setProperty("Webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		
+		
+	}
+	
+
+}

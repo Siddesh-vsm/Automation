@@ -1,0 +1,11 @@
+package generic;
+
+public class CommonMethods {
+	
+	public static void randowmString() {
+		
+		
+		String s1 = Math.random();
+	}
+
+}

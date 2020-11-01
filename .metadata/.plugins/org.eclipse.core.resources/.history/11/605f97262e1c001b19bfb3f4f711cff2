@@ -1,0 +1,50 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.Reporter;
+
+import generic.CommonMethods;
+
+public class Testcase4 {
+
+	public static void verifyErrormessages(WebDriver driver) {
+		try {
+			driver.findElement(By.className("login")).click();
+			driver.findElement(By.id("email_create")).sendKeys(CommonMethods.randomString() + "@test.com");
+			driver.findElement(By.name("SubmitCreate")).click();
+			driver.findElement(By.id("customer_firstname")).sendKeys("1233");
+			driver.findElement(By.id("customer_lastname")).sendKeys("84569");
+			driver.findElement(By.id("passwd")).sendKeys("785");
+			driver.findElement(By.id("city")).sendKeys("78456");
+			driver.findElement(By.id("postcode")).sendKeys("ytgfrff");
+			driver.findElement(By.id("phone_mobile")).sendKeys("jekdfqgdb");
+			driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,200)");
+			Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"firstname \"]")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"passwd\"]")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"address1\"]")).isDisplayed());
+			//Assert.assertTrue(driver.findElement(By.xpath("//b[text()=\"city\"]")).isDisplayed());
+
+			Assert.assertTrue(
+					driver.findElement(By.xpath("//li[text()=\"This country requires you to choose a State.\"]"))
+							.isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"Zip/Postal\")]")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"State\")]")).isDisplayed());
+			Assert.assertTrue(driver.findElement(By.xpath("//li[contains(text(),\"phone number\")]")).isDisplayed());
+		} catch (Exception e) {
+
+			System.out.println("Error not displyed");
+			Reporter.log("Error not displyed");
+			Assert.fail();
+
+		}
+	}
+
+}

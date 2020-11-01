@@ -1,0 +1,29 @@
+
+public class question {
+
+	public static void main(String[] args) {
+		public static void main(String[] args) {
+
+			Object[] arry = { 1, 10, 2, 2, 10, 3, 3, 3, 4, 5, 5 };
+			Object[] stringarry = { "G", "e", "e", "k", "s" };
+			removeDuplicates(arry.length, arry);
+			removeDuplicates(stringarry.length, stringarry);
+
+		}
+
+		public static void removeDuplicates(int len, Object ar[]) {
+
+			Set s1 = new HashSet();
+
+			for (int i = 0; i < len; i++) {
+				s1.add(ar[i]);
+
+			}
+			System.out.println(s1);
+
+		}
+
+
+	}
+
+}

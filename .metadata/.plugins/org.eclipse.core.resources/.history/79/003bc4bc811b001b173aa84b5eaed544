@@ -1,0 +1,110 @@
+package Motorola.Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	
+	static void userValidation(WebDriver driver) {
+
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("siddesh3@yahoo.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.id("customer_firstname")).sendKeys("Use");
+		driver.findElement(By.id("customer_lastname")).sendKeys("Lastname");
+		driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+		// driver.findElement(By.id("firstname")).sendKeys("User1");
+		// driver.findElement(By.id("lastname")).sendKeys("Lastname1");
+		driver.findElement(By.id("city")).sendKeys("Banglore");
+		driver.findElement(By.id("address1")).sendKeys("#dummy address");
+		driver.findElement(By.id("address1")).sendKeys("#dummy address");
+		driver.findElement(By.id("address1")).sendKeys("#dummy address");
+		WebElement select = driver.findElement(By.id("id_state"));
+		Select s1 = new Select(select);
+		s1.selectByVisibleText("Indiana");
+		driver.findElement(By.id("postcode")).sendKeys("85962");
+		driver.findElement(By.id("phone_mobile")).sendKeys("8596237856");
+		driver.findElement(By.id("alias")).sendKeys("#dummy refference");
+		driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+		String etitle = "My account - My Store";
+		String atitle = driver.getTitle();
+		//Assert.check(etitle.equals(atitle), "User not created");
+		System.out.println("User created successfully");
+
+	}
+	
+	@SuppressWarnings("restriction")
+	static void verifyInvliadEmail(WebDriver driver,WebDriverWait wait) {
+		
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email")).sendKeys("test455tgg");
+		driver.findElement(By.name("SubmitLogin")).click();
+		try {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[text()=\"Invalid email address.\"]")));
+		String s1 =driver.findElement(By.xpath("//li[text()=\"Invalid email address.\"]")).getText();
+		
+		if (s1.contains("invlid")) {
+			System.out.println("invalid user error showing up");	
+		}else {
+		
+		//Assert.fail();
+		}
+		System.out.println("invalid user error showing up");	
+		}
+		catch(Exception e) {
+			System.out.println("error not found");
+	
+	}}
+		
+	
+	
+	static void mandatoryFields(WebDriver driver) {
+		try {
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("siddesh312@yahoo.com");
+		driver.findElement(By.name("SubmitCreate")).click();
+		driver.findElement(By.xpath("//span[text()=\"Register\"]")).click();
+		driver.findElement(By.xpath("//b[text()=\"lastname\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"firstname \"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"passwd\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"address1\"]")).isDisplayed();
+		driver.findElement(By.xpath("//b[text()=\"city\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[text()=\"You must register at least one phone number.\"]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"Zip/Postal\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"State\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"phone number\")]")).isDisplayed();
+		driver.findElement(By.xpath("//li[contains(text(),\"abc\")]")).isDisplayed();
+		
+		}
+		catch(Exception e) {
+			
+			
+		}
+	}
+		static void verifyErrormessages(WebDriver driver) {
+			
+			driver.findElement(By.className("login")).click();
+			driver.findElement(By.id("email_create")).sendKeys("siddesh3@yahoo.com");
+			driver.findElement(By.name("SubmitCreate")).click();
+			driver.findElement(By.id("customer_firstname")).sendKeys("1233");
+			driver.findElement(By.id("customer_lastname")).sendKeys("34545");
+			driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+			
+		}
+		
+		
+		
+
+	
+}
+
+}

@@ -1,0 +1,20 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class testcase6 {
+
+	
+	public static void buyProduct(WebDriver driver, WebDriverWait wait) {
+		
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email")).sendKeys("siddesh@yahoo.com");
+		driver.findElement(By.id("passwd")).sendKeys("Pass@123");
+		driver.findElement(By.id("SubmitLogin")).click();
+		
+		
+	}
+	
+}

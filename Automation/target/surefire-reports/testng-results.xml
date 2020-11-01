@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[User created successfully]]>
+    </line>
+    <line>
+      <![CDATA[invalid user error showing up]]>
+    </line>
+    <line>
+      <![CDATA[Errors dispyed properly]]>
+    </line>
+    <line>
+      <![CDATA[Search working properly]]>
+    </line>
+    <line>
+      <![CDATA[order placed]]>
+    </line>
+    <line>
+      <![CDATA[Error messages displyed]]>
+    </line>
+    <line>
+      <![CDATA[item is present in wishList]]>
+    </line>
+    <line>
+      <![CDATA[Error messages displyed]]>
+    </line>
+    <line>
+      <![CDATA[price changed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-11-01T23:51:22 IST" name="Suite" finished-at="2020-11-01T23:55:31 IST" duration-ms="248804">
+    <groups>
+    </groups>
+    <test started-at="2020-11-01T23:51:22 IST" name="Test" finished-at="2020-11-01T23:55:31 IST" duration-ms="248804">
+      <class name="automationpractise.Automation">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:51:22 IST" name="openBrowser" finished-at="2020-11-01T23:51:35 IST" duration-ms="12921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="userValidate()[pri:1, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:51:35 IST" name="userValidate" finished-at="2020-11-01T23:51:50 IST" duration-ms="14998" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[User created successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- userValidate -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:51:50 IST" name="closeBrowser" finished-at="2020-11-01T23:51:51 IST" duration-ms="628" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=userValidate status=SUCCESS method=Automation.userValidate()[pri:1, instance:automationpractise.Automation@4c40b76e] output=User created successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:51:51 IST" name="openBrowser" finished-at="2020-11-01T23:52:02 IST" duration-ms="11407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="verifyEmail()[pri:2, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:02 IST" name="verifyEmail" finished-at="2020-11-01T23:52:08 IST" duration-ms="5568" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[invalid user error showing up]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyEmail -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:08 IST" name="closeBrowser" finished-at="2020-11-01T23:52:08 IST" duration-ms="636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEmail status=SUCCESS method=Automation.verifyEmail()[pri:2, instance:automationpractise.Automation@4c40b76e] output=invalid user error showing up]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:08 IST" name="openBrowser" finished-at="2020-11-01T23:52:21 IST" duration-ms="12298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="mandataryFeilds()[pri:3, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:21 IST" name="mandataryFeilds" finished-at="2020-11-01T23:52:32 IST" duration-ms="11777" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Errors dispyed properly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- mandataryFeilds -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:32 IST" name="closeBrowser" finished-at="2020-11-01T23:52:33 IST" duration-ms="630" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=mandataryFeilds status=SUCCESS method=Automation.mandataryFeilds()[pri:3, instance:automationpractise.Automation@4c40b76e] output=Errors dispyed properly]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:33 IST" name="openBrowser" finished-at="2020-11-01T23:52:44 IST" duration-ms="10975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="changeQuantity()[pri:4, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:44 IST" name="changeQuantity" finished-at="2020-11-01T23:52:53 IST" duration-ms="9063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeQuantity -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:53 IST" name="closeBrowser" finished-at="2020-11-01T23:52:54 IST" duration-ms="659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changeQuantity status=SUCCESS method=Automation.changeQuantity()[pri:4, instance:automationpractise.Automation@4c40b76e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:52:54 IST" name="openBrowser" finished-at="2020-11-01T23:53:05 IST" duration-ms="11688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="searchProduct()[pri:5, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:53:05 IST" name="searchProduct" finished-at="2020-11-01T23:53:14 IST" duration-ms="8437" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Search working properly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:53:14 IST" name="closeBrowser" finished-at="2020-11-01T23:53:14 IST" duration-ms="660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchProduct status=SUCCESS method=Automation.searchProduct()[pri:5, instance:automationpractise.Automation@4c40b76e] output=Search working properly]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:53:14 IST" name="openBrowser" finished-at="2020-11-01T23:53:26 IST" duration-ms="11999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="buyProduct()[pri:6, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:53:26 IST" name="buyProduct" finished-at="2020-11-01T23:54:02 IST" duration-ms="35179" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[order placed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- buyProduct -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:02 IST" name="closeBrowser" finished-at="2020-11-01T23:54:02 IST" duration-ms="643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buyProduct status=SUCCESS method=Automation.buyProduct()[pri:6, instance:automationpractise.Automation@4c40b76e] output=order placed]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:02 IST" name="openBrowser" finished-at="2020-11-01T23:54:17 IST" duration-ms="14722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="errorMessage()[pri:7, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:17 IST" name="errorMessage" finished-at="2020-11-01T23:54:23 IST" duration-ms="5671" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Error messages displyed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- errorMessage -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:23 IST" name="closeBrowser" finished-at="2020-11-01T23:54:23 IST" duration-ms="641" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=errorMessage status=SUCCESS method=Automation.errorMessage()[pri:7, instance:automationpractise.Automation@4c40b76e] output=Error messages displyed]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:23 IST" name="openBrowser" finished-at="2020-11-01T23:54:35 IST" duration-ms="11906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="wishList()[pri:8, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:35 IST" name="wishList" finished-at="2020-11-01T23:54:52 IST" duration-ms="16960" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[item is present in wishList]]>
+            </line>
+            <line>
+              <![CDATA[Error messages displyed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- wishList -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:52 IST" name="closeBrowser" finished-at="2020-11-01T23:54:53 IST" duration-ms="642" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wishList status=SUCCESS method=Automation.wishList()[pri:8, instance:automationpractise.Automation@4c40b76e] output=item is present in wishList]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:54:53 IST" name="openBrowser" finished-at="2020-11-01T23:55:06 IST" duration-ms="12829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="quantity()[pri:9, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:55:06 IST" name="quantity" finished-at="2020-11-01T23:55:30 IST" duration-ms="24537" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[price changed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quantity -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:automationpractise.Automation@4c40b76e]" started-at="2020-11-01T23:55:30 IST" name="closeBrowser" finished-at="2020-11-01T23:55:31 IST" duration-ms="648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=quantity status=SUCCESS method=Automation.quantity()[pri:9, instance:automationpractise.Automation@4c40b76e] output=price changed]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- automationpractise.Automation -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
